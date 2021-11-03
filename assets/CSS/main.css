@@ -78,3 +78,55 @@
     cursor: text;
     color: var(--white-color);
 }
+
+/************ Header QR code **************/
+.header__qr {
+    width: 186px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 118%;
+    padding: 8px;
+    border-radius: 10px;
+    display: none;
+    animation: fadeIN ease-out 0.3s; /* Animation bên Base.css*/
+}
+
+/* Làm cầu nối để hiện QR */
+.header__qr::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    height: 20px;
+    content: "";
+    width: 100%;
+}
+
+/*Chỉ định trực tiếp hover vào header__qr để show ra QR*/
+.header__navbar--item--has--qr:hover .header__qr{
+    display: block;
+}
+
+.header__qr--img {
+    width: 100%;
+}
+
+.header__qr--apps {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px; /* Canh cho thẳng hàng với QR*/
+    margin-right: 11px;
+
+}
+
+/* Cách này dùng Fix cứng*/
+/* .header__qr--link:nth-child(1) {
+    margin-left: 11px;
+}
+.header__qr--link:nth-child(2) {
+    margin-right: 11px;
+} */
+
+.header__qr--download-img {
+    height: 15px;
+}
