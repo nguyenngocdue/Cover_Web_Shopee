@@ -28,3 +28,15 @@ html {
     display: flex;
     flex-wrap: wrap;
 }
+
+/* Animation */
+@keyframes fadeIN {
+    from {
+        opacity: 0;
+
+    }
+    to {
+        opacity: 1;
+
+    }
+}
