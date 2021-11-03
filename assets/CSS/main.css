@@ -17,6 +17,7 @@
 .header__navbar--item{
     margin: 0 8px;
     position: relative;
+    min-height: 26px; /* Giúp căn giữa đối tượng icons và chữ*/
 }
 
 .header__navbar--item,
@@ -28,6 +29,7 @@
     font-weight: 300;
 }
 
+.header__navbar--icon--link:hover,
 .header__navbar--item:hover,
 .header__navbar--item--link:hover {
     cursor: pointer;
@@ -50,8 +52,29 @@
 
 }
 
-/************ Icon **************/
+/************ Icons **************/
 .header__navbar--icon--link {
     color: var(--white-color);
     text-decoration: none;
+}
+
+.header__navbar--icon {
+    font-size: 1.8rem;
+}
+/* Algin center icons and Words*/
+.header__navbar--item,
+.header__navbar--item--link,
+.header__navbar--icon--link {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__navbar--icon {
+    font-size: 1.8rem;
+    margin: 0 4px;
+}
+
+.header__navbar-title--no-pointer {
+    cursor: text;
+    color: var(--white-color);
 }
