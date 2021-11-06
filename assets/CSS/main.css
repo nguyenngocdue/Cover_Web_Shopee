@@ -143,8 +143,8 @@
     background-color: var(--white-color);
     border: 1px solid #D3D3D3;
     cursor: default;
-    display: none;
-    transform-origin: top right;
+    /* display: none; */
+    transform-origin: calc(100% -20px) top;
     animation: headerNotifyGrowth ease-in 0.25s;
     
 }
@@ -162,7 +162,6 @@
     right: 0;
     height: 20px;
     margin-top: -15px;
-   
 }
 
 .header__notify--header {
@@ -233,6 +232,7 @@
 .hearder__notify-footer {
     /* text-align: center; */
     display: flex;
+    background-color: #f2e7e7;
 
 }
 
@@ -246,4 +246,17 @@
     text-align: center
     /* display: inline-block; */
     /* margin: auto; Dựa vào display: Flex, Căn giữ cho "Xem tất cả"  */
+}
+
+
+/* Làm arrow for notify*/
+.header__notify--header::before {
+    position: absolute;
+    right: 14px;
+    top: -30px;
+    content: "";
+    border-width: 20px 26px;
+    border-style: solid;
+    border-color: transparent transparent #ffffff transparent;
+
 }
