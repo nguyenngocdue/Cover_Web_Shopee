@@ -143,9 +143,16 @@
     background-color: var(--white-color);
     border: 1px solid #D3D3D3;
     cursor: default;
-    /* display: none; */
+    display: none;
     transform-origin: calc(100% -20px) top;
-    animation: headerNotifyGrowth ease-in 0.25s;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    will-change: transform, opacity;/* ưu tiên animation cho trình duyệt */
+
+    -webkit-animation: headerNotifyGrowth ease-in 0.2s;
+    -ms-animation: headerNotifyGrowth ease-in 0.2s;
+    -o-animation: headerNotifyGrowth ease-in 0.2s;
+    -moz-animation: headerNotifyGrowth ease-in 0.2s;
+
     
 }
 
@@ -258,5 +265,66 @@
     border-width: 20px 26px;
     border-style: solid;
     border-color: transparent transparent #ffffff transparent;
+}
+
+/********************** Authen model ********************/
+
+/* Container */
+
+.auth-form__container {
+    padding: 32px;
+}
+
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
 
 }
+.auth-form_switch-btn {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.auth-form__input {
+    height: 40px;
+    width: 100%;
+    margin-top: 16px;
+    font-size: 1.4rem;
+    padding-left: 12px;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+    outline: none;
+}
+
+/* Hiệu ứng con trỏ chuột trong button */
+.auth-form__input:focus {
+    border-color: rgb(15, 14, 14);
+}
+
+/* Aside */
+.auth-form__aside {
+    margin-top: 18px;
+}
+
+.auth-form__policy-text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: center;
+    padding: 0 12px;
+}
+
+.auth-form_text-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+
+
