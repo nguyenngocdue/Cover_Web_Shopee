@@ -90,6 +90,7 @@
     border-radius: 10px;
     display: none;
     animation: fadeIN ease-out 0.3s; /* Animation bên Base.css*/
+    border: 1px solid #ccc;
 }
 
 /* Làm cầu nối để hiện QR */
@@ -141,6 +142,27 @@
     top: 118%;
     background-color: var(--white-color);
     border: 1px solid #D3D3D3;
+    cursor: default;
+    display: none;
+    transform-origin: top right;
+    animation: headerNotifyGrowth ease-in 0.25s;
+    
+}
+
+/*Chỉ định trực tiếp hover vào .header__notify để show ra notify*/
+.header__navbar-item--has--notify:hover .header__notify {
+    display: inline-block;
+}
+
+/* Làm cầu nối để hiện notify*/
+.header__notify::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    right: 0;
+    height: 20px;
+    margin-top: -15px;
+   
 }
 
 .header__notify--header {
@@ -166,7 +188,8 @@
 }
 
 .header_notify--item:hover {
-    background-color: #f7f7f7
+    background-color: #f7f7f7;
+    /* border: 1px solid #fe6032; */
 }
 
 
@@ -195,28 +218,32 @@
     display: block;
     font-size: 1.4rem;
     font-weight: 400;
-    color: var(--black-color);
+    color: var(--text-color);
     
 
 }
 .header__notify-descrition {
     display: block;
     font-size: 1.2rem;
-    /* line-height: 1.6rem; */
+    line-height: 1.6rem;
     margin-top: 0.6rem;
     color: #75676E;
 }
 
 .hearder__notify-footer {
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
 
 }
 
 .header__notify-footer-btn {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.4rem;
     font-weight: 400;
     color: var(--text-color);
-    padding: 16px;
-    display: inline-block;
+    padding: 12px 0;
+    width: 100%;
+    text-align: center
+    /* display: inline-block; */
+    /* margin: auto; Dựa vào display: Flex, Căn giữ cho "Xem tất cả"  */
 }
