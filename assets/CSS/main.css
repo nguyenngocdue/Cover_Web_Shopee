@@ -270,15 +270,23 @@
 /********************** Authen model ********************/
 
 /* Container */
+.auth-form {
+    width: 500px;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    overflow: hidden;
+}
 
 .auth-form__container {
-    padding: 32px;
+    padding: 0 32px;
 }
 
 .auth-form__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
 }
 
 .auth-form__heading {
@@ -326,5 +334,43 @@
     text-decoration: none;
 }
 
+.auth-form__controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 80px;
+}
 
+.auth-form__control-back {
+    margin-right: 8px;
+}
 
+.auth-form-socials-title {
+    margin: 0 24px;
+}
+
+.auth-form-socials--google {
+    background-color: var(--white-color);
+    color: #666;
+}
+
+.auth-form_help {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+
+.auth-form__help-separate {
+    display: block;
+    border-left: 1px solid #EAEAEA;
+    height: 22px;
+    margin: -4px 16px 0;
+}
+
+.auth-form__help-forgot {
+    color: var(--primary-color);
+}
