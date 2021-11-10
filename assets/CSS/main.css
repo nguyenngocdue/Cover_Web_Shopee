@@ -88,7 +88,7 @@
     left: 0;
     top: 118%;
     padding: 8px;
-    border-radius: 10px;
+    border-radius: 20px;
     display: none;
     animation: fadeIN ease-out 0.3s; /* Animation bên Base.css*/
     border: 1px solid #ccc;
@@ -273,7 +273,7 @@
 /* Container */
 .auth-form {
     width: 500px;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: var(--white-color);
     overflow: hidden;
 }
@@ -417,8 +417,10 @@
     margin-top: 6px;;
 }
 
+
+
 .header__search-input {
-    /* width: 100%; */
+    width: 100%;
     flex: 1;
     height: 100%;
     padding-left: 8px;
@@ -428,6 +430,7 @@
     color: var(--te-color);
     outline: none;
     font-weight: 300;
+    padding-right: 0;
 }
 
 .header__search-select {
@@ -465,7 +468,7 @@
     list-style: none;
     box-shadow: -1px 1px 3px #ccc;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 2px;
     display: none;
     animation: fadeIN ease-in .2s;
 }
@@ -524,4 +527,61 @@
 .header__search-btn-icon {
     color: var(--white-color);
     font-size: 1.4rem;
+}
+
+/******************Lịch sử tìm kiếm****************/
+
+.header__search-input-wrap {
+    flex: 1;
+    height: 100%;
+    position: relative;
+
+}
+
+.header__search-history {
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: calc(100% + 6px);
+    width: calc(100% - 16px);
+    margin-left: -3px;
+    padding: 8px 0 0 0;
+    border-radius: 2px;
+    box-shadow: -1px 1px 5px #ccc ;
+    display: none;
+    overflow: hidden;
+
+}
+
+.header__search-history-heading {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 100;
+    opacity: 0.5;
+    padding: 4px 0 4px 11px;
+
+}
+
+.header__search-history-list {
+    list-style: none;
+}
+
+.header__search-history-list a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    padding-left: 11px;
+    
+}
+
+.header__search-history-item {
+    padding: 8px 0 8px 0;
+}
+
+.header__search-history-item:hover {
+    background-color: var(--select-hover);
+}
+
+.header__search-input:focus ~ .header__search-history {
+    display: inline-block;
 }
