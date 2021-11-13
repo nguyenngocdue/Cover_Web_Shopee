@@ -1,6 +1,6 @@
 :root {
 
-    --primary-color: #EE4D2D;
+    --primary-color: #f6432e;
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
@@ -8,6 +8,10 @@
     --header--height: 120px;
     --navbar-height : 34px;
     --header-with-search-height: calc(var(--header--height) - var(--navbar-height));
+    --header-search-heigh: 40px;
+    --offset : 5px;
+    --headar-search-icon-heigh: calc(var(--header-search-heigh) - var(--offset));
+    --select-hover: #f7f7f7;
 
 }
 
@@ -103,7 +107,7 @@ html {
 
 /* Button style */
 .btn {
-    width: 142px;
+    width: 124px;
     height: 34px;
     text-decoration: none;
     border: none;
@@ -111,7 +115,8 @@ html {
     padding: 0 12px;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--text-color);
+    color: var(--white-color);
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
