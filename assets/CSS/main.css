@@ -1,6 +1,6 @@
 .header {
     height: var(--header--height);
-    background-image: linear-gradient(0, #fe6232, #f6412d);
+    background-image: linear-gradient(0, #fe6132, #f6412d);
 }
 
 .header__navbar {
@@ -47,7 +47,7 @@
 }
 
 .header__navbar-user-name {
-    margin-left: 8px;
+    margin-left: 4px;
     font-size: 1.4rem;
     font-weight: 400;
 }
@@ -98,6 +98,10 @@
     display: block;
 }
 
+.header_navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .header_navbar-user-item:hover a {
     background-color: #fafafa;
 }
@@ -119,6 +123,10 @@
     color: var(--white-color);
     text-decoration: none;
     font-weight: 300;
+}
+
+.header__notify-help-icon {
+    padding-right: 4px;
 }
 
 .header__navbar--icon--link:hover,
@@ -148,6 +156,11 @@
 .header__navbar--icon--link {
     color: var(--white-color);
     text-decoration: none;
+}
+
+.header__navbar--icon--link:nth-child(2)
+{
+    margin-left: 3px;
 }
 
 .header__navbar--icon {
@@ -233,12 +246,14 @@
     right : 0;
     top: 118%;
     background-color: var(--white-color);
-    border: 1px solid #D3D3D3;
-    cursor: default;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: default;    
     display: none;
-    transform-origin: calc(100% -20px) top;
+    transform-origin: calc(100% - 35px) top;
     animation: headerNotifyGrowth ease-in 0.2s;
     will-change: transform, opacity;/* ưu tiên animation cho trình duyệt */
+    z-index: 2;
+    border-radius: 2px;
 
     -webkit-animation: headerNotifyGrowth ease-in 0.2s;
     -ms-animation: headerNotifyGrowth ease-in 0.2s;
@@ -486,6 +501,11 @@
     width: 150px;
 }
 
+.header__logo-link {
+    color: transparent;
+    text-decoration: none;
+}
+
 .header__search {
     height: var(--header-search-heigh);
     background-color: var(--white-color);
@@ -512,6 +532,7 @@
 
 .header__search-select {
     position: relative;
+    padding: 0 6px;
 }
 
 .header__search-select:hover .header__search-option {
@@ -538,9 +559,8 @@
 .header__search-option {
     position: absolute;
     right: 0;
-    top: 100%;
+    top: calc(100% + 4px);
     padding: 0;
-    margin-top: 15px;
     width: 140px;
     list-style: none;
     box-shadow: -1px 1px 3px #ccc;
