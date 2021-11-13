@@ -133,7 +133,7 @@ html {
 
 /* Button style */
 .btn {
-    width: 124px;
+    min-width: 124px;
     height: 34px;
     text-decoration: none;
     border: none;
@@ -194,3 +194,57 @@ html {
     color: var(--white-color);
 }
 
+/***************** Selection*****************/
+
+.select-input {
+    padding: 0 12px;
+    height: 34px;
+    min-width: 200px;
+    background: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.selecte-input__label {
+    font-size: 1.4rem;
+}
+
+.selecte-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131,131,131);
+    position: relative;
+    top: 1px;
+}
+
+.slecte-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 4px);
+    border-radius: 2px;
+    background-color: var(--white-color);
+    margin: 0;
+    padding: 8px 12px;
+    list-style: none;
+    display: none;
+
+}
+
+.slecte-input__link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    padding: 8px 0;
+
+}
+
+.select-input:hover .slecte-input__list  {
+    display: inline-block;
+}
+
+.slecte-input__link:hover {
+    color: var(--primary-color);
+}
