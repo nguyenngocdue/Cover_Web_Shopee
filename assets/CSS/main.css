@@ -1022,5 +1022,43 @@
 
 .home-filter__page-btn-disable.home-filter__page-icon {
     color: #ccc;
+}
 
+
+/*************** Product Items ***************/
+
+.home-product-item {
+    width: 100%;
+    background-color: var(--white-color);
+}
+
+
+.home-product-item__img-frame,
+.home-product-item__img-product {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.home-product {
+    margin-top: 10px;
+}
+
+.home-product-item_name {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-product-color);
+    line-height: 1.8rem;
+    margin: 10px;
+    height: 3.6rem;
+    overflow: hidden;
+
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* text-overflow: ellipsis;
+    white-space: nowrap; */
+
+    
 }
